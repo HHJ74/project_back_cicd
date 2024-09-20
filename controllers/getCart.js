@@ -45,7 +45,7 @@ exports.getCart = async (req, res) => {
       cartItems: itemsResult.rows,
       diyItems: diyItemsResult.rows
     });
-
+      console.log("됐나");
   } catch (error) {
     console.error('Error fetching cart items:', error);
     res.status(500).json({ error: 'Internal server error' });
