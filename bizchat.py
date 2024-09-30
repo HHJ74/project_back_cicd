@@ -143,11 +143,11 @@ rag_chain = (
     | StrOutputParser()
 )
 
-recieved_question =""
+recieved_question =sys.argv[1]
 
 from langchain_teddynote.messages import stream_response
 
-answer = rag_chain.stream("신혼부부를 위한 정책을 알려주세요")
+answer = rag_chain.stream(recieved_question)
 stream_response(answer)
 
 print(answer)
